@@ -1,4 +1,4 @@
-# TaskFlo
+# TaskFlow
 
 TaskFlow is a premium, browser-based student productivity dashboard for managing assignments, classes, deadlines, goals, focus sessions, and study analytics.
 
