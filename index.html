@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TaskFlow - Plan smarter. Study better. Get things done." />
+  <title>TaskFlow · Student productivity dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.468.0/font/lucide.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><div class="brand-mark"><i class="icon-sparkles"></i></div><div><strong>TaskFlow</strong><span>Student workspace</span></div></div>
+      <button class="sidebar-close icon-btn" id="sidebarClose" aria-label="Close navigation"><i class="icon-x"></i></button>
+      
+      <div class="sidebar-bottom">
+        <div class="streak-mini"><div class="streak-icon">🔥</div><div><span>Current streak</span><strong id="sideStreak">0 days</strong></div></div>
+        <div class="sidebar-user"><div class="avatar" id="sideAvatar">AJ</div><div class="user-meta"><strong id="sideName">Alex Johnson</strong><span>Student account</span></div><button class="icon-btn" data-view="settings" aria-label="Open profile"><i class="icon-chevron-right"></i></button></div>
+        <button class="theme-toggle" id="themeToggle"><i class="icon-moon"></i><span>Dark mode</span><span class="toggle-track"><span></span></span></button>
+      </div>
+    </aside>
+    <div class="mobile-backdrop" id="mobileBackdrop"></div>
+    <main class="main-content">
+      <header class="topbar">
+        <div class="topbar-left"><button class="icon-btn mobile-menu" id="mobileMenu" aria-label="Open navigation"><i class="icon-menu"></i></button><div><p class="eyebrow" id="viewEyebrow">Student workspace</p><h1 id="viewTitle">Good evening, Alex 👋</h1></div></div>
+        <div class="topbar-actions">
+          <label class="search-box"><i class="icon-search"></i><input id="globalSearch" type="search" placeholder="Search tasks, subjects..." aria-label="Search tasks and subjects" /><kbd>⌘ K</kbd></label>
+          <button class="icon-btn notification-btn" id="notificationBtn" aria-label="Notifications"><i class="icon-bell"></i><span class="notification-dot" id="notificationDot"></span></button>
+          <button class="button primary quick-add" data-action="add-task"><i class="icon-plus"></i><span>Quick add</span></button>
+          <button class="avatar avatar-button" id="profileButton" aria-label="Open profile menu">AJ</button>
+        </div>
+      </header>
+      <section class="view active" id="dashboardView"></section>
+      <section class="view" id="tasksView"></section>
+      <section class="view" id="calendarView"></section>
+      <section class="view" id="subjectsView"></section>
+      <section class="view" id="goalsView"></section>
+      <section class="view" id="focusView"></section>
+      <section class="view" id="analyticsView"></section>
+      <section class="view" id="settingsView"></section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden><div class="modal" id="modal" role="dialog" aria-modal="true"></div></div>
+  <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+  <div class="notification-panel" id="notificationPanel" hidden></div>
+  <input type="file" id="importInput" accept="application/json" hidden />
+  <script src="./js/app.js"></script>
+</body>
+</html>
