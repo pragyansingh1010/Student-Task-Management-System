@@ -16,7 +16,18 @@
     <aside class="sidebar" id="sidebar">
       <div class="brand"><div class="brand-mark"><i class="icon-sparkles"></i></div><div><strong>TaskFlow</strong><span>Student workspace</span></div></div>
       <button class="sidebar-close icon-btn" id="sidebarClose" aria-label="Close navigation"><i class="icon-x"></i></button>
-      
+      <nav class="main-nav" aria-label="Main navigation">
+        <p class="nav-label">Workspace</p>
+        <button class="nav-item active" data-view="dashboard"><i class="icon-layout-dashboard"></i><span>Dashboard</span></button>
+        <button class="nav-item" data-view="tasks"><i class="icon-check-square"></i><span>My Tasks</span><b class="nav-count" id="navTaskCount">0</b></button>
+        <button class="nav-item" data-view="calendar"><i class="icon-calendar-days"></i><span>Calendar</span></button>
+        <button class="nav-item" data-view="subjects"><i class="icon-book-open"></i><span>Subjects</span></button>
+        <button class="nav-item" data-view="goals"><i class="icon-target"></i><span>Goals</span></button>
+        <p class="nav-label">Improve</p>
+        <button class="nav-item" data-view="focus"><i class="icon-timer"></i><span>Focus Mode</span></button>
+        <button class="nav-item" data-view="analytics"><i class="icon-chart-no-axes-combined"></i><span>Analytics</span></button>
+        <button class="nav-item" data-view="settings"><i class="icon-settings-2"></i><span>Settings</span></button>
+      </nav>
       <div class="sidebar-bottom">
         <div class="streak-mini"><div class="streak-icon">🔥</div><div><span>Current streak</span><strong id="sideStreak">0 days</strong></div></div>
         <div class="sidebar-user"><div class="avatar" id="sideAvatar">AJ</div><div class="user-meta"><strong id="sideName">Alex Johnson</strong><span>Student account</span></div><button class="icon-btn" data-view="settings" aria-label="Open profile"><i class="icon-chevron-right"></i></button></div>
