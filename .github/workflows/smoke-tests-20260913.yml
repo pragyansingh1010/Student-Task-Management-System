@@ -1,0 +1,10 @@
+name: Task Manager Smoke Tests
+on:
+  push:
+    branches: [main]
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python tests/repository_smoke.py
